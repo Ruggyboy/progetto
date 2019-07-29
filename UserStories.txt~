@@ -1,0 +1,176 @@
+“Ordinary users” and “Leader users” are two types of registered users
+
+    As an unregistered user
+
+    I want to sign up by typing some personal information
+
+    so that I can access the app
+
+    As an unregistered user
+
+    I want to sign up with Google +
+
+    so that I can access the app
+
+    As a registered user
+
+    I want to log in with username and password
+
+    so that I can access the app
+
+    As a registered user
+
+    I want to log in with my Google account
+
+    so that I can access the app
+
+    As a registered user
+
+    I want to recover my forgotten password
+
+    so that I can access the app
+
+    As a registered user
+
+    I want to log out
+
+    so that I can disconnect myself from the website
+
+    As a registered user
+
+    I want to set my profile picture
+
+    so that other users can see that
+
+    As a registered user
+
+    I want to update my profile information
+
+    so that other users can know if they change
+
+    As an administrator
+
+    I want to delete a user profile
+
+    so that I ensure bad behaviour is not tolerated on the website
+
+    As a registered user
+
+    I want to perform a quick player search
+
+    so that I find out all nearby players and their posititon on the map
+
+    As a registered user
+
+    I want to perform a quick group search
+
+    so that I find out all nearby groups and their posititon on the map
+
+    As a registered user
+
+    I want to perform a custom search
+
+    so that I find out nearby groups or players that satisfy some requirements, and their position on the map
+
+    As an ordinary user who is not in a group
+
+    I want to became a leader user
+
+    so that I can create my own group
+
+    As a leader user
+
+    I want to create my own group
+
+    As a leader user
+
+    I want to get back to ordinary user
+
+    so that I can join a group as a non-leader member
+
+    As a leader user who is in a group of at least two members
+
+    I want to yield the leader's position to another member
+
+    so that I can stop being the group's leader
+
+    As a leader user who is in a group of at least two members
+
+    I want to remove an ordinary user from my group
+
+    so that I can mantain quality within the group
+
+    As a leader user in a group
+
+    I want to accept an ordinary user request to enter in the group
+
+    so that I can add that user in the group
+
+    As a leader user in a group
+
+    I want to send a request to an ordinary user to enter in the group
+
+    so that he can decide to enter in the group or not
+
+    As an ordinary user
+
+    I want to send a request to leader user to enter in his group
+
+    so that he can decide to accept my request or not
+
+    As a registered user
+
+    I want to click on a user pin on the map
+
+    so that I can visualize his profile
+
+    As a registered user
+
+    I want to click on a group pin on the map
+
+    so that I can visualize its profile
+
+    As a leader user
+
+    I want to update group profile information
+
+    so that other users can see if they change
+
+    As a registered user
+
+    I want to permanently delete my account
+
+    so that I will not be registered on the website anymore
+
+    As a registered user
+
+    I want to share a user profile (including my own) on my Google+ account
+
+    so that other people can know about it
+
+    As a registered user
+
+    I want to share a group profile on my Google+ account
+
+    so that other people can know about it
+
+    As a registered user
+
+    I want to delete my account
+
+    so that I'm no longer on the app
+
+    As a registered user
+
+    I want to send a private message to another user
+
+    As an administrator
+
+    I want to remove a group
+
+    To ensure that quality is preserved on the app
+
+    As an ordinary user who is in a group
+
+    I want to leave the group
+
