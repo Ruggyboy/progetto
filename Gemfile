@@ -74,8 +74,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :production do
 #  gem 'fog', '1.42'
-  gem 'pg', '0.20.0'
+  gem 'pg' #, '0.20.0'
 end
 
 gem 'sendgrid'
 
+gem 'geocoder'
+gem 'gmaps4rails'
+gem 'omniauth-google-oauth2'

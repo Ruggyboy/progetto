@@ -30,13 +30,38 @@ Rails.application.configure do
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
 
-  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :test
-  host = 'localhost:3000' # Don't use this literally; use your local dev host instead
+
   # Use this on the cloud IDE.
-  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
   # Use this if developing on localhost.
   # config.action_mailer.default_url_options = { host: host, protocol: 'http' }
+
+
+
+
+
+
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  host = 'localhost:3001' # Don't use this literally; use your local dev host instead
+  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
+#  config.action_mailer.default_url_options = { :host => "http://myband.com", :port => 3001 }
+  config.action_mailer.perform_deliveries = true
+  ActionMailer::Base.smtp_settings = {
+    :address        => 'smtp.sendgrid.net',
+    :port           => '587',
+    :authentication => :plain,
+    :domain         => "gmail.com",
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
+    :enable_starttls_auto => true
+  }
+
+
+
+
+
+
 
   config.action_mailer.perform_caching = false
 

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :places
+  get 'bands/new'
   get 'password_resets/new'
   get 'password_resets/edit'
   root 'static_pages#home'
@@ -12,6 +14,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :password_resets#,     only: [:new, :create, :edit, :update]
+  resources :bands
   # get 'users/new'
   # get 'static_pages/help'
   # get 'static_pages/about'
