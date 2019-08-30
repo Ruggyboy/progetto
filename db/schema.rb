@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_26_150307) do
+ActiveRecord::Schema.define(version: 2019_08_28_141641) do
 
   create_table "bands", force: :cascade do |t|
     t.string "name"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "location"
     t.index ["user_id"], name: "index_bands_on_user_id"
   end
 
@@ -27,6 +28,16 @@ ActiveRecord::Schema.define(version: 2019_08_26_150307) do
     t.float "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "relationships", force: :cascade do |t|
+    t.string "groupLocation"
+    t.string "placeName"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["groupLocation", "placeName"], name: "index_relationships_on_groupLocation_and_placeName", unique: true
+    t.index ["groupLocation"], name: "index_relationships_on_groupLocation"
+    t.index ["placeName"], name: "index_relationships_on_placeName"
   end
 
   create_table "users", force: :cascade do |t|
