@@ -28,14 +28,33 @@
     <nav id="sidebar">
         <!--<% provide(:title, @band.name) %>-->
         <h1>
-             <img src="https://www.google.it/maps/place/JoySport+Roma+s.s.d.+a+r.l./@41.9202227,12.5240187,17z/data=!3m1!4b1!4m5!3m4!1s0x132f79f5e448fb69:0xae4273a9fc76309d!8m2!3d41.9202187!4d12.5262074"
-             alt="" height="600" width="600">
         </h1>
     </nav>
 
     <!-- Page Content -->
     <div id="content">
-        <!-- We'll fill this with dummy content -->
+        <span> Your band: </span>
+        <%= @band.name %>
+        <br/>
+        <br/>
+        <span> Other members: </span>
+        <%= @band.member_2.name if @band.member_2 %>
+        <%= @band.member_3.name if @band.member_3 %>
+        <%= @band.member_4.name if @band.member_4 %>
+        <%= @band.member_5.name if @band.member_5 %>
+        <br/>
+        <br/>
+        <span> Location: </span>
+        <%= @band.location %>
+        <br/>
+        <br/>
+        <span> Looking for other members: </span>
+        <%= @band.open ? "yes" : "no" %>
+        <br/>
+        <br/>
+
+        <%= button_to "Change group info"%>
+        <%= link_to 'Disband the group', '#' %>
     </div>
 
 </div>

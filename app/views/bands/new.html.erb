@@ -9,6 +9,17 @@
       <%= f.label :name %>
       <%= f.text_field :name, class: 'form-control' %> <br/>
 
+      <%= f.label :location %>
+      <%= f.text_field :location, class: 'form-control' %> <br/>
+
+      <!--<#%= f.label :open, class: "checkbox inline" do %>
+        <#%= f.check_box :open %>
+        <#span>Looking for other members?</span>
+      <#% end %>-->
+
+      <%= f.label "Looking for other members?" %>
+      <%= f.check_box :open, {checked: true, checked_value: "yes", unchecked_value: "No"}  %>
+
       <%= f.submit "Create my band", class: "btn btn-primary" %>
     <% end %>
   </div>

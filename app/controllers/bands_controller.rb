@@ -15,7 +15,7 @@ class BandsController < ApplicationController
     else
       render 'new'
     end
-  end
+
 
 #  def index
 #    @bands = Band.all
