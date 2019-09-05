@@ -1,21 +1,92 @@
-<% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
-      </h1>
-      <h2>
-        <%= button_to "Player search"%>
-        <%= button_to "Band search"%>
-        <%= button_to "Custom search"%>
-        <img src="https://maps.googleapis.com/maps/api/staticmap?center=Albany,+NY&zoom=13&scale=1&size=600x300&maptype=roadmap&key=AIzaSyCZ0p8CYBsSj2Id4aqgOIuvbOnDjUN9w5k&format=png&visual_refresh=true"
-        width="600" alt="Google Map of Albany, NY" >
-
-        <span> "Do you want to create your own group?" </span>
-        <%= link_to 'Become a leader!', '#' %>
-      </h2>
-    </section>
-  </aside>
+    </h1>
 </div>
+
+<div class="content">
+    <% provide(:title, @user.name) %>
+    <div class="row">
+    <aside class="col-md-4">
+        <section class="user_info">
+        <h2>
+            <%= button_to "Player search"%>
+            <%= button_to "Band search"%>
+            <%= button_to "Custom search"%>
+            <img width="600" src="https://maps.googleapis.com/maps/api/staticmap?center=Albany,+NY&zoom=13&scale=1&size=600x300&maptype=roadmap&key=AIzaSyAc0rh3T8nZJ9SCEQDYJnfR8HPsZL9Z38M&format=png&visual_refresh=true"
+            alt="Google Map of Albany, NY">
+
+            <span> "Do you want to create your own group?" </span>
+            <%= link_to 'Become a leader!', '#' %>
+        </h2>
+        </section>
+    </aside>
+    </div>
+</div>
+
+</body>
+</html>

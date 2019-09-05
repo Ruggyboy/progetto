@@ -17,6 +17,11 @@ class BandsController < ApplicationController
     end
 
 
+  def custom_search
+    render 'bands/custom_search'
+  end
+
+
 #  def index
 #    @bands = Band.all
 #  end

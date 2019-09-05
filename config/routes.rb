@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
 
+  get 'bands/custom_search', to: 'bands#custom_search'
+
   resources :users
   resources :password_resets#,     only: [:new, :create, :edit, :update]
   resources :bands

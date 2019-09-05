@@ -3,7 +3,52 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
+    <%= form_for(:band, url: 'bands/custom_search') do |f| %>
 
-    <%= f.submit "Search", class: "btn btn-primary" %>
-  <% end %>
-</div
+      <label>Max Distance:</label>
+      <select>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select>
+
+      <label>Number of Members:</label>
+      <select>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+
+      <%= f.submit "Band Search", class: "btn btn-primary" %>
+    <% end %>
+
+    <hr>
+
+    <%= form_for(:band, url: 'bands/custom_search') do |f| %>
+
+      <label>Max Distance:</label>
+      <select>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select>
+
+      <label>Role:</label>
+      <select>
+        <option value="singer">singer</option>
+        <option value="guitarist">guitarist</option>
+        <option value=drummer">drummer</option>
+        <option value="bassist">bassist</option>
+        <option value="keyboardist">keyboardist</option>
+      </select>
+
+      <%= f.submit "Player Search", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

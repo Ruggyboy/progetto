@@ -17,9 +17,14 @@
         <span>Remember me on this computer</span>
       <% end %>
 
+      <br/>
+
       <%= f.submit "Log in", class: "btn btn-primary" %>
     <% end %>
 
     <p>New user? <%= link_to "Sign up", signup_path %></p>
+
+    <span>Have a Google account? </span>
+    <%= button_to "Log in with Google" %>
   </div>
 </div>
