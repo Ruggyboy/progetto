@@ -2,26 +2,6 @@
 	<%= render :partial => "layouts/sidebar" %>
 <% end %>
 
-<div class="sidenav">
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#clients">Clients</a>
-  <a href="#contact">Contact</a>
-</div>
-
-<% provide(:title, @band.name) %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= gravatar_for @band.user %>
-        <%= @band.user.name %>
-      </h1>
-    </section>
-  </aside>
-</div>-->
-
-
 <div class="wrapper">
 
     <!-- Sidebar -->
