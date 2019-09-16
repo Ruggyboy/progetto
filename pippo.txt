@@ -1,3 +1,11 @@
 fdafadf
+<<<<<<< HEAD
 vnbmn,mmb n
+=======
+asdasdasdasd
+asdasdasdasd
+asdasdasdasd
+asdasdasdasd
+asdasdasdasd
+>>>>>>> master
 
