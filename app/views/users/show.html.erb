@@ -65,7 +65,15 @@ div.content {
     <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
+        <%= @user.role %>
+        <%= @user.location %>
     </h1>
+    <h2>
+        <%= link_to 'Update profile information', edit_user_path(current_user) %>
+    </h2>
+    <h3>
+        <%= link_to "Delete your profile", @user, method: :delete, data: { confirm: "You sure?" } %>
+    </h3>
 </div>
 
 <div class="content">

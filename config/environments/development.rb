@@ -34,7 +34,8 @@ Rails.application.configure do
 
   # Use this on the cloud IDE.
   # Use this if developing on localhost.
-  # config.action_mailer.default_url_options = { host: host, protocol: 'http' }
+
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
 
 

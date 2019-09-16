@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :places
+
   get 'bands/new'
   get 'password_resets/new'
   get 'password_resets/edit'
@@ -14,9 +14,13 @@ Rails.application.routes.draw do
 
   get 'bands/custom_search', to: 'bands#custom_search'
 
+  #devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
+
   resources :users
   resources :password_resets#,     only: [:new, :create, :edit, :update]
   resources :bands
+  resources :places
   # get 'users/new'
   # get 'static_pages/help'
   # get 'static_pages/about'

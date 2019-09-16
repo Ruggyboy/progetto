@@ -24,7 +24,10 @@
 
     <p>New user? <%= link_to "Sign up", signup_path %></p>
 
-    <span>Have a Google account? </span>
-    <%= button_to "Log in with Google" %>
+    <!--<span>Have a Google account? </span>-->
+    <%# button_to "Log in with Google" %>
+
+    <label> Have a google account? </label>
+    <%= link_to "Sign up / Login with Google", user_google_oauth2_omniauth_authorize_path, id:'oauth' %>
   </div>
 </div>

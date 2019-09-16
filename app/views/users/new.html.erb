@@ -21,5 +21,13 @@
 
       <%= f.submit "Create my account", class: "btn btn-primary" %>
     <% end %>
+    <hr/>
+
+    <!--<label> Have a facebook account? </label>-->
+    <%# link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+    <%# link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
+
+    <label> Have a google account? </label>
+    <%= link_to "Sign up with Google", user_google_oauth2_omniauth_authorize_path, id:'oauth' %>
   </div>
 </div>
