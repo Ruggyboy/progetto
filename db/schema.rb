@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_15_092121) do
+ActiveRecord::Schema.define(version: 2019_09_17_190827) do
 
   create_table "bands", force: :cascade do |t|
     t.string "name"
@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 2019_09_15_092121) do
 
   create_table "places", force: :cascade do |t|
     t.string "name"
-    t.string "address"
     t.float "latitude"
     t.float "longitude"
     t.datetime "created_at", null: false
@@ -65,6 +64,7 @@ ActiveRecord::Schema.define(version: 2019_09_15_092121) do
     t.datetime "reset_password_sent_at"
     t.string "remember_token"
     t.datetime "remember_created_at"
+    t.boolean "leader", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end

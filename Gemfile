@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.4.1'
+ruby '2.3.3'
+#ruby '2.4.1'
 
 gem 'responders'
 
@@ -63,8 +64,8 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
-
-
+  gem 'cucumber', '~> 3.1.0'
+  gem 'rspec', '~> 3.7.0'
 
 #  gem 'rails-controller-testing', '1.0.2'
 #  gem 'minitest',                 '5.10.3'

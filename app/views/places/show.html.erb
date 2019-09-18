@@ -5,10 +5,7 @@
   <%= @place.name %>
 </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @place.address %>
-</p>
+
 
 <p>
   <strong>Latitude:</strong>
@@ -22,3 +19,8 @@
 
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>
+
+<p>
+<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&center=#{@place.latitude},
+    #{@place.longitude}&key=#{"AIzaSyC92vyj77ENDCrd3yJbVWNATIMYSC-F7Y8"}", alt: "Map" %>
+</p>
