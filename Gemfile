@@ -66,6 +66,8 @@ group :test do
   gem 'chromedriver-helper'
   gem 'cucumber', '~> 3.1.0'
   gem 'rspec', '~> 3.7.0'
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels'
 
 #  gem 'rails-controller-testing', '1.0.2'
 #  gem 'minitest',                 '5.10.3'
