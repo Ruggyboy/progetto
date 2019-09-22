@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.3.3'
-#ruby '2.4.1'
+#ruby '2.3.3'
+#ruby '2.6.3'
+ruby '2.4.1'
 
 gem 'responders'
 
@@ -52,10 +53,11 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
+  #gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'listen'
 end
 
 group :test do
@@ -66,6 +68,8 @@ group :test do
   gem 'chromedriver-helper'
   gem 'cucumber', '~> 3.1.0'
   gem 'rspec', '~> 3.7.0'
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels'
 
 #  gem 'rails-controller-testing', '1.0.2'
 #  gem 'minitest',                 '5.10.3'
