@@ -11,6 +11,8 @@ gem 'responders'
 gem 'rails', '~> 5.2.3'
 gem 'bootstrap-sass', '3.3.7'
 # Use sqlite3 as the database for Active Record
+#gem 'sqlite3', '1.4.1'
+#gem 'sqlite3', '1.3.13'
 gem 'sqlite3'
 # Use Puma as the app serverbundl
 gem 'puma', '~> 3.11'
@@ -67,13 +69,19 @@ group :test do
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
   gem 'cucumber', '~> 3.1.0'
-  gem 'rspec', '~> 3.7.0'
-  gem 'cucumber-rails', :require => false
-  gem 'cucumber-rails-training-wheels'
+  gem 'rspec'
+
+#  gem "rspec-core", :github => "rspec/rspec-core"
+#  gem "rspec-expectations", :github => "rspec/rspec-expectations"
+#  gem "rspec-mocks", :github => "rspec/rspec-mocks"
+#  gem "rspec-support", :github => "rspec/rspec-support"
+#  gem "rspec-rails", :github => "rspec/rspec-rails"
+#  gem 'cucumber-rails', :require => false
+#  gem 'cucumber-rails-training-wheels'
 
 #  gem 'rails-controller-testing', '1.0.2'
 #  gem 'minitest',                 '5.10.3'
-#  gem 'minitest',		   '5.11.3'
+#  gem 'minitest',		           '5.11.3'
 #  gem 'minitest-reporters',       '1.1.14'
 #  gem 'guard',                    '2.14.1'
 #  gem 'guard-minitest',           '2.4.6'
@@ -85,6 +93,14 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :production do
 #  gem 'fog', '1.42'
   #gem 'pg' #, '0.20.0'
+end
+
+group :development, :test do
+  #gem 'rspec-rails', '~> 3.0.0'
+  #gem 'rspec-rails',      ">= 2.0.0.beta"
+  gem 'rspec-rails'
+  #gem 'rspec-rails', '~> 3.7'
+  gem 'factory_girl_rails'
 end
 
 gem 'sendgrid'
