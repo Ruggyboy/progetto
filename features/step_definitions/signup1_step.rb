@@ -1,3 +1,5 @@
+require_relative '../support/env'
+
 Given("i am on the signup page") do
   visit('http://localhost:3000/signup')
 end

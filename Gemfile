@@ -2,14 +2,15 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 #ruby '2.3.3'
-#ruby '2.6.3'
-ruby '2.4.1'
+ruby '2.6.3'
+#ruby '2.4.1'
 
 gem 'responders'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 gem 'bootstrap-sass', '3.3.7'
+gem 'bootstrap-will_paginate', '~> 0.0.10'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3', '1.4.1'
 #gem 'sqlite3', '1.3.13'
@@ -32,11 +33,14 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.12'
+#gem 'bcrypt', '~> 3.1.12'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'faker',          '1.9.1'
-
+gem 'fog-xenserver', '~> 0.3.0'
+gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+gem 'cancan', '~> 1.6', '>= 1.6.10'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -62,13 +66,19 @@ group :development do
   gem 'listen'
 end
 
+
+
+
+
+
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
-  gem 'cucumber', '~> 3.1.0'
+  #gem 'cucumber', '~> 3.1.0'
+  gem 'cucumber', '~> 3.1', '>= 3.1.2'
   gem 'rspec'
 
 #  gem "rspec-core", :github => "rspec/rspec-core"
@@ -76,16 +86,26 @@ group :test do
 #  gem "rspec-mocks", :github => "rspec/rspec-mocks"
 #  gem "rspec-support", :github => "rspec/rspec-support"
 #  gem "rspec-rails", :github => "rspec/rspec-rails"
-#  gem 'cucumber-rails', :require => false
-#  gem 'cucumber-rails-training-wheels'
+   gem 'cucumber-rails', :require => false
+   gem 'cucumber-rails-training-wheels'
 
-#  gem 'rails-controller-testing', '1.0.2'
+   gem 'rails-controller-testing', '1.0.2'
 #  gem 'minitest',                 '5.10.3'
 #  gem 'minitest',		           '5.11.3'
 #  gem 'minitest-reporters',       '1.1.14'
 #  gem 'guard',                    '2.14.1'
 #  gem 'guard-minitest',           '2.4.6'
+   gem 'database_cleaner'
+   gem 'launchy', '~> 2.4', '>= 2.4.3'
+   gem 'phantomjs'
+   gem 'poltergeist'
+   gem  'webdrivers'
 end
+
+
+
+
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
@@ -101,6 +121,7 @@ group :development, :test do
   gem 'rspec-rails'
   #gem 'rspec-rails', '~> 3.7'
   gem 'factory_girl_rails'
+  gem 'selenium-webdriver'
 end
 
 gem 'sendgrid'
