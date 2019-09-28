@@ -71,7 +71,7 @@ end
 
 
 
-group :test do
+group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
@@ -87,6 +87,8 @@ group :test do
 #  gem "rspec-support", :github => "rspec/rspec-support"
 #  gem "rspec-rails", :github => "rspec/rspec-rails"
    gem 'cucumber-rails', :require => false
+   #gem 'cucumber-rails'
+   #gem 'cucumber-rails', '~> 1.4.2', :require => false
    gem 'cucumber-rails-training-wheels'
 
    gem 'rails-controller-testing', '1.0.2'
