@@ -41,6 +41,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 gem 'cancan', '~> 1.6', '>= 1.6.10'
+gem 'activesupport', '~> 5.2.3'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
