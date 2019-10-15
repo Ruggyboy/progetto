@@ -124,7 +124,21 @@ div.content {
             <br/>
 
             <span> "Do you want to create your own group?" </span>
-            <%= link_to 'Become a leader!', '#' %>
+
+
+
+
+
+
+            <%# link_to 'Become a leader!', {:controller => "users", :action => "become_leader",
+                :id => @user.id} %>
+            <%# link_to 'Become a leader!', {:controller => "users", :action => "become_leader"} %>
+            <%# link_to "Become a leader", become_leader_path(@user.id)%>
+
+
+
+
+
         </h2>
         </section>
     </aside>

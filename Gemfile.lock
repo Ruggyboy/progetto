@@ -51,7 +51,7 @@ GEM
       execjs
     backports (3.15.0)
     bcrypt (3.1.13)
-    bcrypt-ruby (3.0.1)
+    bcrypt-ruby (3.1.2)
     bindex (0.8.1)
     bootsnap (1.4.5)
       msgpack (~> 1.0)
@@ -340,7 +340,7 @@ PLATFORMS
 DEPENDENCIES
   activesupport (~> 5.2.3)
   bcrypt (~> 3.1.7)
-  bcrypt-ruby (= 3.0.1)
+  bcrypt-ruby (= 3.1.2)
   bootsnap (>= 1.1.0)
   bootstrap-sass (= 3.3.7)
   bootstrap-will_paginate (~> 0.0.10)
@@ -372,8 +372,12 @@ DEPENDENCIES
   rails (~> 5.2.3)
   rails-controller-testing (= 1.0.2)
   responders
-  rspec
+  rspec (~> 3.6)
+  rspec-core
+  rspec-expectations
+  rspec-mocks
   rspec-rails
+  rspec-support
   sass-rails (~> 5.0)
   selenium-webdriver
   sendgrid

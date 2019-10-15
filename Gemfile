@@ -34,7 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 #gem 'bcrypt', '~> 3.1.12'
-gem 'bcrypt-ruby', '3.0.1'
+gem 'bcrypt-ruby', '3.1.2'
 gem 'faker',          '1.9.1'
 gem 'fog-xenserver', '~> 0.3.0'
 gem 'bcrypt', '~> 3.1.7'
@@ -80,13 +80,19 @@ group :development, :test do
   gem 'chromedriver-helper'
   #gem 'cucumber', '~> 3.1.0'
   gem 'cucumber', '~> 3.1', '>= 3.1.2'
-  gem 'rspec'
+  gem 'rspec', '~> 3.6'
 
-#  gem "rspec-core", :github => "rspec/rspec-core"
-#  gem "rspec-expectations", :github => "rspec/rspec-expectations"
-#  gem "rspec-mocks", :github => "rspec/rspec-mocks"
-#  gem "rspec-support", :github => "rspec/rspec-support"
-#  gem "rspec-rails", :github => "rspec/rspec-rails"
+  #gem 'rspec-core', :github => "rspec/rspec-core"
+  #gem "rspec-expectations", :github => "rspec/rspec-expectations"
+  #gem "rspec-mocks", :github => "rspec/rspec-mocks"
+  #gem "rspec-support", :github => "rspec/rspec-support"
+  #gem "rspec-rails", :github => "rspec/rspec-rails"
+  gem 'rspec-core'
+  gem "rspec-expectations"
+  gem "rspec-mocks"
+  gem "rspec-support"
+  gem "rspec-rails"
+
    gem 'cucumber-rails', :require => false
    #gem 'cucumber-rails'
    #gem 'cucumber-rails', '~> 1.4.2', :require => false
@@ -110,6 +116,7 @@ end
 
 
 
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
@@ -121,7 +128,7 @@ end
 group :development, :test do
   #gem 'rspec-rails', '~> 3.0.0'
   #gem 'rspec-rails',      ">= 2.0.0.beta"
-  gem 'rspec-rails'
+  #gem 'rspec-rails'
   #gem 'rspec-rails', '~> 3.7'
   gem 'factory_girl_rails'
   gem 'selenium-webdriver'
