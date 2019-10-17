@@ -17,7 +17,26 @@ Rails.application.routes.draw do
   #devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
-  resources :users
+
+
+
+
+
+
+  #get 'users/:id/become_leader' => 'users#become_leader', as: become_leader
+
+  resources :users #do
+    #collection do
+     # patch 'become_leader'
+    #end
+  #end
+
+
+
+
+
+
+
   resources :password_resets#,     only: [:new, :create, :edit, :update]
   resources :bands
   resources :places

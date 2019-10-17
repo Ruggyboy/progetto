@@ -43,10 +43,27 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
+
+
+
+
+
+
+  #def become_leader
+  #  (User.find(params[:id])).update_attribute(:leader, true)
+  #end
+
+
+
+
+
+
+
   private
 
   def user_params
     params.require(:user).permit(:name, :email, :password,
                                    :password_confirmation)
   end
+
 end
