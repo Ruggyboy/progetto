@@ -17,6 +17,18 @@
         <#span>Looking for other members?</span>
       <#% end %>-->
 
+
+
+
+
+
+      <%= f.hidden_field 'user_id', :value => current_user.id %>
+
+
+
+
+
+
       <%= f.label "Looking for other members?" %>
       <%= f.check_box :open, {checked: true, checked_value: "yes", unchecked_value: "No"}  %>
 

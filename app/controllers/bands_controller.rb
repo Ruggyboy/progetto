@@ -9,16 +9,22 @@ class BandsController < ApplicationController
 
   def create
     @band = Band.new(band_params)
-    log_in @band
+    if @band.save
+      log_in @band
       flash[:success] = "Band successfully created!"
       redirect_to @band
     else
       render 'new'
     end
+end
 
 
   def custom_search
     render 'bands/custom_search'
+  end
+
+  def index
+    @bands = Band.all
   end
 
 
@@ -29,6 +35,6 @@ class BandsController < ApplicationController
   private
 
   def band_params
-    params.require(:band).permit(:name)
+    params.require(:band).permit(:name, :location, :open, :user_id)
   end
 end

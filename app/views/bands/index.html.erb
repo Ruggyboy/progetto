@@ -6,27 +6,25 @@
 </style>
 </head>
 <body>
-<% provide(:title, 'All users') %>
-<h1>All users</h1>
+<% provide(:title, 'All bands') %>
+<h1>All bands</h1>
 
-<ul class="users">
-  <% @users.each do |user| %>
+<ul class="bands">
+  <% @bands.each do |band| %>
     <li>
-      <%= gravatar_for user%>
-      <hr>
       <h2>
-        <%= link_to user.name, user %>
+        <%= link_to band.name, band %>
       </h2>
       <% if current_user.try(:admin?) && !current_user?(user) %>
-        | <%= link_to "delete", user, method: :delete,
+        | <%= link_to "delete", band, method: :delete,
                                   data: { confirm: "You sure?" } %>
       <% end %>
-      <% if user.location != nil %>
+      <% if band.location != nil %>
         <iframe
             width="300"
             height="275"
             frameborder="0" style="border:0"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAc-JjwiFdQ5Pxtsd2f-oRCHdugaLgAzEc&q=<%= user.location %>" allowfullscreen>
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAc-JjwiFdQ5Pxtsd2f-oRCHdugaLgAzEc&q=<%= band.location %>" allowfullscreen>
         </iframe>
       <% end %>
     </li>
