@@ -13,6 +13,7 @@ class BandsController < ApplicationController
       log_in @band
       flash[:success] = "Band successfully created!"
       redirect_to @band
+      current_user.update_attribute(:leader, true)
     else
       render 'new'
     end
