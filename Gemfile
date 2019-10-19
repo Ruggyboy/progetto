@@ -96,7 +96,7 @@ group :development, :test do
   gem "rspec-expectations"
   gem "rspec-mocks"
   gem "rspec-support"
-  gem "rspec-rails"
+  gem "rspec-rails", '~> 3.8'
 
    gem 'cucumber-rails', :require => false
    #gem 'cucumber-rails'

@@ -15,6 +15,9 @@ class User < ApplicationRecord
 
     has_secure_password
     validates :password, presence: true, length: { minimum: 6 }
+    validates :name,  presence: true
+    validates :email, presence: true
+
     attr_accessor :remember_token, :activation_token, :reset_token
 
   def create_reset_digest

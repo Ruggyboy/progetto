@@ -376,7 +376,7 @@ DEPENDENCIES
   rspec-core
   rspec-expectations
   rspec-mocks
-  rspec-rails
+  rspec-rails (~> 3.8)
   rspec-support
   sass-rails (~> 5.0)
   selenium-webdriver
