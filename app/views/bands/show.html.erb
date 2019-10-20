@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+
+
+
+
+
 <!--<% content_for(:sidebar) do %>
 	<%= render :partial => "layouts/sidebar" %>
 <% end %>
@@ -33,9 +45,19 @@
         <br/>
         <br/>
 
-        <%= button_to "Change group info"%>
-        <%= link_to 'Disband the group', '#' %>
-    </div>
+        <%= button_to "Change band info", "http://localhost:3000/bands/#{@band.id}/edit", method: :get %>
+        <%# button_to "Change band info", edit_band_path(@band), method: :post %>
+        <%# link_to "Change band info", edit_band_path(@band) %>
 
+        <%= link_to 'Disband the band', '#' %>
+    </div>
 </div>
+
+
+
+
+
+
+</body>
+</html>
 

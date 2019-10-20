@@ -19,6 +19,19 @@ class BandsController < ApplicationController
     end
 end
 
+  def edit
+    @band = Band.find(params[:id])
+  end
+
+  def update
+    @band = Band.find(params[:id])
+    if @band.update_attributes(band_params)
+      flash[:success] = "Band information updated"
+      redirect_to @band
+    else
+      render 'edit'
+    end
+  end
 
   def custom_search
     render 'bands/custom_search'
@@ -27,11 +40,6 @@ end
   def index
     @bands = Band.all
   end
-
-
-#  def index
-#    @bands = Band.all
-#  end
 
   private
 
