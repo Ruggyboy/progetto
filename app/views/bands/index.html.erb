@@ -19,7 +19,7 @@
         | <%= link_to "delete", band, method: :delete,
                                   data: { confirm: "You sure?" } %>
       <% end %>
-      <% if band.location != nil %>
+      <% if band.location != nil && band.location != "" %>
         <iframe
             width="300"
             height="275"

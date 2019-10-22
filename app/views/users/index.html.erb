@@ -21,7 +21,7 @@
         | <%= link_to "delete", user, method: :delete,
                                   data: { confirm: "You sure?" } %>
       <% end %>
-      <% if user.location != nil %>
+      <% if user.location != nil && user.location != "" %>
         <iframe
             width="300"
             height="275"
