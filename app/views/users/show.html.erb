@@ -137,12 +137,15 @@ div.content {
 
 
             <% if (logged_in? && (@user==current_user))%>
-                <%# link_to 'Become a leader!', {:controller => "users", :action => "become_leader", :id => @user.id} %>
-                <%# link_to 'Become a leader!', {:controller => "users", :action => "become_leader"} %>
-                <%# link_to "Become a leader", become_leader_path(@user.id)%>
+                <% if @user.leader == false%>
+                    <%# link_to 'Become a leader!', {:controller => "users", :action => "become_leader", :id => @user.id} %>
+                    <%# link_to 'Become a leader!', {:controller => "users", :action => "become_leader"} %>
+                    <%# link_to "Become a leader", become_leader_path(@user.id)%>
 
-                <span> "Do you want to create your own group?" </span>
-                <%= link_to "Become a leader", 'http://localhost:3000/bands/new' %>
+                    <span> "Do you want to create your own band?" </span>
+                    <%= link_to "Become a leader", 'http://localhost:3000/bands/new' %>
+                    <%# link_to "Want to create another band?", 'http://localhost:3000/bands/new' %>
+                <% end %>
 
             <% end %>
 
