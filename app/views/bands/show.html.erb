@@ -49,7 +49,12 @@
             <%# button_to "Change band info", edit_band_path(@band), method: :post %>
             <%# link_to "Change band info", edit_band_path(@band) %>
 
-            <%= link_to 'Disband the band', '#' %>
+            <%# link_to 'Disband the band', '#' %>
+
+        <% end %>
+
+        <% if (logged_in? && (@band.user_id==current_user.id))||current_user.admin==true %>
+                <%= link_to "Disband the band", @band, method: :delete, data: { confirm: "You sure?" } %>
         <% end %>
     </div>
 </div>
