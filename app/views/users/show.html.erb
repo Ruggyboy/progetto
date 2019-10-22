@@ -107,7 +107,8 @@ div.content {
         <% end %>
     </h1>
     <h2>
-        <%= link_to 'Update profile information', edit_user_path(current_user) %>
+        <%# link_to 'Update profile information', edit_user_path(current_user) %>
+        <%= link_to 'Update profile information', edit_user_path(@user) %>
     </h2>
     <h3>
         <%= link_to "Delete your profile", @user, method: :delete, data: { confirm: "You sure?" } %>

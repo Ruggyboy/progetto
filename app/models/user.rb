@@ -15,8 +15,8 @@ class User < ApplicationRecord
 
     has_secure_password
     validates :password, presence: true, length: { minimum: 6 }
-    validates :name,  presence: true
-    validates :email, presence: true
+    validates :name,  presence: true, uniqueness: true, length: { maximum: 35 }
+    validates :email, presence: true, length: {maximum: 255}
 
     attr_accessor :remember_token, :activation_token, :reset_token
 

@@ -15,7 +15,7 @@
       <h2>
         <%= link_to band.name, band %>
       </h2>
-      <% if current_user.try(:admin?) && !current_user?(user) %>
+      <% if current_user.try(:admin?)%>
         | <%= link_to "delete", band, method: :delete,
                                   data: { confirm: "You sure?" } %>
       <% end %>
