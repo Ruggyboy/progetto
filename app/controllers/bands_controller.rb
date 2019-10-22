@@ -10,9 +10,10 @@ class BandsController < ApplicationController
   def create
     @band = Band.new(band_params)
     if @band.save
-      log_in @band
+      #log_in @band
       flash[:success] = "Band successfully created!"
-      redirect_to @band
+      #redirect_to @user
+      redirect_to current_user
       current_user.update_attribute(:leader, true)
     else
       render 'new'
