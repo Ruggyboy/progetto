@@ -44,12 +44,13 @@
         <%= @band.open ? "yes" : "no" %>
         <br/>
         <br/>
+        <% if (logged_in? && (@band.user_id == current_user.id))%>
+            <%= button_to "Change band info", "http://localhost:3000/bands/#{@band.id}/edit", method: :get %>
+            <%# button_to "Change band info", edit_band_path(@band), method: :post %>
+            <%# link_to "Change band info", edit_band_path(@band) %>
 
-        <%= button_to "Change band info", "http://localhost:3000/bands/#{@band.id}/edit", method: :get %>
-        <%# button_to "Change band info", edit_band_path(@band), method: :post %>
-        <%# link_to "Change band info", edit_band_path(@band) %>
-
-        <%= link_to 'Disband the band', '#' %>
+            <%= link_to 'Disband the band', '#' %>
+        <% end %>
     </div>
 </div>
 
