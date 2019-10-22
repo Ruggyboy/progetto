@@ -41,6 +41,12 @@ end
     @bands = Band.all
   end
 
+  def destroy
+    Band.find(params[:id]).destroy
+    flash[:success] = "Band deleted"
+    redirect_to bands_url
+  end
+
   private
 
   def band_params
