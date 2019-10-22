@@ -46,6 +46,7 @@ end
     Band.find(params[:id]).destroy
     flash[:success] = "Band deleted"
     redirect_to bands_url
+    current_user.update_attribute(:leader, false)
   end
 
   private
