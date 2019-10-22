@@ -11,6 +11,8 @@ class User < ApplicationRecord
     #    :recoverable, :rememberable, :trackable, :validatable,
     #    :omniauthable, :omniauth_providers => [:facebook]
 
+    has_one :band
+
     devise :rememberable, :omniauthable, omniauth_providers: [:google_oauth2]
 
     has_secure_password

@@ -107,11 +107,15 @@ div.content {
         <% end %>
     </h1>
     <h2>
-        <%# link_to 'Update profile information', edit_user_path(current_user) %>
-        <%= link_to 'Update profile information', edit_user_path(@user) %>
+        <% if logged_in? && (@user==current_user)%>
+            <%# link_to 'Update profile information', edit_user_path(current_user) %>
+            <%= link_to 'Update profile information', edit_user_path(@user) %>
+        <% end %>
     </h2>
     <h3>
-        <%= link_to "Delete your profile", @user, method: :delete, data: { confirm: "You sure?" } %>
+        <% if (logged_in? && (@user==current_user))||current_user.admin==true %>
+            <%= link_to "Delete profile", @user, method: :delete, data: { confirm: "You sure?" } %>
+        <% end %>
     </h3>
 </div>
 
@@ -130,27 +134,22 @@ div.content {
 
             <br/>
 
-            <span> "Do you want to create your own group?" </span>
 
 
+            <% if (logged_in? && (@user==current_user))%>
+                <%# link_to 'Become a leader!', {:controller => "users", :action => "become_leader", :id => @user.id} %>
+                <%# link_to 'Become a leader!', {:controller => "users", :action => "become_leader"} %>
+                <%# link_to "Become a leader", become_leader_path(@user.id)%>
+
+                <span> "Do you want to create your own group?" </span>
+                <%= link_to "Become a leader", 'http://localhost:3000/bands/new' %>
+
+            <% end %>
 
 
-
-
-            <%# link_to 'Become a leader!', {:controller => "users", :action => "become_leader",
-                :id => @user.id} %>
-            <%# link_to 'Become a leader!', {:controller => "users", :action => "become_leader"} %>
-            <%# link_to "Become a leader", become_leader_path(@user.id)%>
-            <%= link_to "Become a leader", 'http://localhost:3000/bands/new' %>
 
             <br/>
             <br/>
-
-
-
-
-
-
 
             <!--<iframe
                 width="600"
@@ -169,13 +168,6 @@ div.content {
                     src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAc-JjwiFdQ5Pxtsd2f-oRCHdugaLgAzEc&q=<%= @user.location %>" allowfullscreen>
                 </iframe>
             <% end %>
-
-
-
-
-
-
-
 
         </h2>
         </section>

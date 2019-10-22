@@ -27,6 +27,11 @@
             </a>
             <ul class="dropdown-menu">
               <li><%= link_to "Profile", current_user %></li>
+
+              <% if current_user.leader==true %>
+                <li><%= link_to "My Band", "http://localhost:3000/bands/#{current_user.id}"%></li>
+              <% end %>
+
               <!--<li><%= link_to "Settings", '#' %></li>-->
               <li class="divider"></li>
               <li>
