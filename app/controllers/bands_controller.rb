@@ -17,7 +17,7 @@ class BandsController < ApplicationController
       current_user.update_attribute(:leader, true)
     else
       flash[:info] = "Band name isn't valid"
-      render 'new'
+      render 'bands/new'
     end
   end
 
