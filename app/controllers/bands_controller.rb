@@ -16,9 +16,10 @@ class BandsController < ApplicationController
       redirect_to @band
       current_user.update_attribute(:leader, true)
     else
+      flash[:info] = "Band name isn't valid"
       render 'new'
     end
-end
+  end
 
   def edit
     @band = Band.find(params[:id])
